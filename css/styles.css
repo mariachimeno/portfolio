@@ -14,28 +14,7 @@
     --white: #FFF;
 }
 
-/* width */
-::-webkit-scrollbar {
-    width: 0.5rem;
-    background-color: var(--black);
-  }
-  
-  /* Track */
-  ::-webkit-scrollbar-track {
-    color: transparent;
 
-  }
-   
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
-    background: var(--white); 
-    border-radius: 0.3rem;
-  }
-  
-  /* Handle on hover */
-  ::-webkit-scrollbar-thumb:hover {
-    background: var(--white); 
-  }
 
 @font-face {
     font-family: 'mori';
@@ -508,15 +487,30 @@ main .projects-page {
     }
 }
 
-.project-videos .project-video-3 {
-    width: calc(100% / 4);
+.project-videos .project-video-1 {
+    width: 67%;
+    margin-left: 33%;
     margin-bottom: 1rem;
+}
+
+@media (max-width:1200px) {
+    .project-videos .project-video-1 {
+        width: 100%;
+        margin-left: 0rem;
+        margin-bottom: 1rem;
+    }
 }
 
 .project-videos .project-video-2 {
     width: 50%;
     margin-bottom: 1.5rem;
 }
+
+.project-videos .project-video-3 {
+    width: calc(100% / 4);
+    margin-bottom: 1rem;
+}
+
 
 .project-videos .project-video-vertical {
     position: relative;
@@ -532,6 +526,14 @@ main .projects-page {
     margin-bottom: 1.5rem;
     width: 100%;
     aspect-ratio: 1/1;
+}
+
+.project-videos .project-video-landscape {
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 1.5rem;
+    width: 100%;
+    aspect-ratio: 16/9;
 }
 
 .project-videos iframe {
