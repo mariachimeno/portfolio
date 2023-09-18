@@ -254,20 +254,10 @@ main.about .about-text::selection {
 
 @media (max-width:769px) {
     main.about .about-text {
-        font-size: 1.75rem;
-        line-height: 2.25rem;
+        font-size: 2.5rem;
+        line-height: 3rem;
         padding-top: 4rem;
         padding-bottom: 2rem;
-    }
-
-    main.about .about-text::selection {
-    color: var(--yellow);
-    background: var(--yellow);
-    }
-
-    .playful::selection {
-        color: var(--pink);
-        background: var(--purple);
     }
 }
 
@@ -562,7 +552,7 @@ header.projects .menu-item:hover {
 @media (max-width:1070px) {
     .project-title {
         position: fixed;
-        width: 100%;
+        width: 80%;
         margin-top: 4rem;
         font-size: 2rem;
         font-weight: 400;
