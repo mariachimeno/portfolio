@@ -7,11 +7,23 @@
 }
 
 :root {
-    --black: #000000;
-    --yellow: #fff200;
-    --red: #ed1c24;
-    --pink: #f9bcc6;
     --white: #FFF;
+    --beige: #fbe5ca;
+    --grey: #a6a5a5;
+    --black: #000000;
+    --yellow: #ffff00;
+    --mustard: #ffc800;
+    --orange: #ff6600;
+    --hotred: #ff3608;
+    --red: #f30000;
+    --babypink: #ffdae9;
+    --pink: #ff95d5;
+    --hotpink: #ff00b7;
+    --purple: #6c27ff;
+    --lilac: #b6a0ff;
+    --trueblue: #001aff;
+    --blue: #00deff;
+    --green: #06ec3f;
 }
 
 
@@ -24,6 +36,11 @@
     font-family: 'pass';
     src: url(fonts/pass-regular.woff);
     font-weight: 400;
+
+    font-family: 'rungli-italic';
+    src: url(fonts/rungli-italic.woff2);
+    font-weight: 400;
+
 }
 
 @media (max-width:800px) {
@@ -33,8 +50,23 @@
 }
 
 body {
+    overflow: overlay;
     font-family: 'pass', sans-serif;
     line-height: 1.5;
+}
+
+::-webkit-scrollbar {
+    background: transparent;
+    width: 0px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--black);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background: none;
 }
 
 a {
@@ -49,6 +81,11 @@ h4,
 h5,
 h6 {
     font-size: 1rem;
+}
+
+hr {
+    color: var(--black);
+    margin: 0.35rem 0;
 }
 
 .flex-container {
@@ -95,8 +132,15 @@ header .flex-container {
 }
 
 header .menu-item {
-    width: calc(100% / 12 * 4);
-    font-size: 1.5rem;
+    width: calc(100% / 12 * 2);
+    font-size: 1.25rem;
+}
+
+@media (max-width:769px) {
+    header .menu-item {
+    width: calc(100% / 12 * 2.7);
+    font-size: 1.25rem;
+    }
 }
 
 header .menu-item:hover {
@@ -105,13 +149,20 @@ header .menu-item:hover {
 }
 
 header .logo {
-    width: calc(100% / 12 * 4);
+    width: calc(100% / 12 * 6);
     text-align: right;
+}
+
+@media (max-width:769px) {
+    header .logo {
+        width: calc(100% / 12 * 1);
+        text-align: right;
+    }
 }
 
 header .logo img {
     width: auto;
-    height: 1.25rem;
+    height: 1.15rem;
     display: inline-block;
 }
 
@@ -122,7 +173,7 @@ header .logo img:hover {
 
 /* ----- Main ----- */
 main.home {
-    background-color: var(--white);
+    background: var(--white);
     height: 100vh;
     height: calc(var(--vh, 1vh) * 100);
     padding: 1.5rem;
@@ -137,7 +188,7 @@ main.home {
 }
 
 .header-index .menu-item:hover {
-    color: var(--white);
+    opacity: 0%;
 }
 
 main .home-logo img {
@@ -148,7 +199,15 @@ main .home-logo img {
 main .home-visuals img {
     width: 100%;
     height: auto;
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
+}
+
+@media (max-width:769px) {
+    main .home-visuals img {
+        width: 100%;
+        height: auto;
+        margin-bottom: 1.5rem;
+    }
 }
 
 /* ----- About ----- */
@@ -177,21 +236,26 @@ main.about {
 }
 
 main.about .about-text {
-    font-size: 1.75rem;
-    line-height: 2.25rem;
+    font-size: 3rem;
+    line-height: 3.5rem;
     padding-top: 4rem;
     padding-bottom: 2rem;
 }
 
+.playful::selection {
+    color: var(--pink);
+    background: var(--purple);
+}
+
 main.about .about-text::selection {
-    color: var(--yellow);
-    background: var(--red);
+    color: transparent;
+    background: var(--yellow);
   }
 
 @media (max-width:769px) {
     main.about .about-text {
-        font-size: 1.75rem;
-        line-height: 2.25rem;
+        font-size: 3rem;
+        line-height: 3.5rem;
         padding-top: 4rem;
         padding-bottom: 2rem;
     }
@@ -214,14 +278,19 @@ main.about .about-detail {
 }
 
 main.about .about-detail::selection {
-    color: var(--yellow);
-    background: var(--red);
+    color: var(--grey);
+    
   }
 
+
 main.about .about-detail .about-link:hover {
-    transition: .2s;
-    color: var(--yellow);
-    background-color: var(--red);
+    font-family: 'rungli-italic';
+    src: url(fonts/rungli-italic.woff2);
+    font-weight: 400;
+    font-size: 1.3rem;
+    line-height: 1.45rem;
+    color: var(--grey);
+    background-color: var(--yellow);
 }
 
 main.about .about-detail-timeline {
@@ -238,16 +307,23 @@ main.about .about-detail-timeline {
 }
 
 main.about .about-detail-timeline::selection {
-    color: var(--yellow);
-    background: var(--red);
+    color: var(--grey);
   }
 
 main.about .about-detail-timeline .about-link:hover {
-    transition: .2s;
-    color: var(--yellow);
-    background-color: var(--red);
+    color: var(--grey);
+    background-color: var(--yellow);
+    font-family: 'rungli-italic';
+    src: url(fonts/rungli-italic.woff2);
+    font-weight: 400;
+    font-size: 1.3rem;
+    line-height: 1.45rem;
 }
 
+.about-link::selection {
+    transition: .2s;
+    color: var(--grey);
+}
 
 main.about .about-education {
     font-size: 1.75rem;
@@ -257,15 +333,15 @@ main.about .about-education {
 }
 
 main.about .about-education::selection {
-    color: var(--yellow);
-    background: var(--red);
+    color: var(--grey);
   }
 
 main.about .about-education .about-link:hover {
     transition: .2s;
-    color: var(--yellow);
-    background-color: var(--red);
+    color: var(--grey);
+    background-color: var(--yellow);
 }
+
 
 @media (max-width:769px) {
     main.about .about-education {
@@ -282,18 +358,23 @@ main.about .about-education .about-link:hover {
 }
 
 header .menu-item:hover {
-    color: var(--white);
+    opacity: 0%;
     transition: .2s;
 }
 
+ /*
 main.projects {
     margin-top: 4rem;
 }
+*/ 
 
 .container {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
+    /*
+    padding: 0.3rem;
+    */
 }
 
 .card {
@@ -301,7 +382,13 @@ main.projects {
     width: calc(100% / 2);
     aspect-ratio: 4/3;
     color: var(--black);
-    background-color: var(--black);
+    /*
+    background: transparent;
+    border-style: solid;
+    border-width: 0.3rem;
+    border-color: var(--white);
+    */
+
 }
 
 .card::before {
@@ -316,7 +403,7 @@ main.projects {
     clear: both;
   }
 
-@media (max-width:769px) {
+@media (max-width:900px) {
     .card {
         flex: 100%;
     }
@@ -344,25 +431,84 @@ main.projects {
     bottom: 0;
     z-index: 10;
     background: var(--white);
-    font-size: 2rem;
-    line-height: 2.75rem;
+    font-size: 1.25rem;
+    line-height: 1.75rem;
     padding: 1rem 1.5rem 1rem 1.5rem;
+
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-end;
 }
 
-.pink {
-    background: var(--pink);
+.card-info .card-title {
+    font-size: 2rem;
+    line-height: 2.45rem;
+    padding-bottom: 1rem;
+   }
+
+.grey {
+    background:var(--grey);
+}
+
+.beige {
+    background: var(--beige);
+}
+
+.yellow {
+    background: var(--yellow);
+}
+
+.mustard {
+    background: var(--mustard);
+}
+
+.orange {
+    background: var(--orange);
+}
+
+.hotred {
+    background: var(--hotred);
 }
 
 .red {
     background: var(--red);
 }
 
-.yellow {
-    background: var(--yellow);
+.babypink {
+    background: var(--babypink);
 }
+
+.pink {
+    background: var(--pink);
+}
+
+.hotpink {
+    background: var(--hotpink);
+}
+
+.purple {
+    background: var(--purple);
+}
+
+.lilac {
+    background: var(--lilac);
+}
+
+.trueblue {
+    background: var(--trueblue);
+}
+
+.blue {
+    background: var(--blue);
+}
+
+.green {
+    background: var(--green);
+}
+
+
+
+
 
 .card:hover .card-info {
     color: var(--white);
@@ -376,13 +522,10 @@ header.projects {
 }
 
 header.projects .menu-item:hover {
-    color: var(--black);
+    opacity: transparent;
     background-color: transparent;
 }
 
-main .projects-page {
-    background-color: var(--black);
-}
 
 .projects-page {
     width: 100%;
@@ -393,6 +536,7 @@ main .projects-page {
 
 .project-title {
     position: fixed;
+    width: calc(100% / 3.2);
     margin-top: 4rem;
     font-size: 2rem;
     font-weight: 400;
@@ -401,29 +545,44 @@ main .projects-page {
 }
 
 .project-title::selection {
-    color: var(--black);
-    background: var(--white);
+    color: var(--yellow);
   }
 
+
+@media (max-width:1070px) {
+    .project-title {
+        position: fixed;
+        width: 100%;
+        margin-top: 4rem;
+        font-size: 2rem;
+        font-weight: 400;
+        line-height: 1.25;
+        color: var(--white);
+    }
+}
+
 .project-tags {
-    margin-left: calc(100% / 12 * 4);
-    margin-top: 4.5rem;
+    position: fixed;
+    width: calc(100% / 3.5);
+    margin-top: 8rem;
     text-align: left;
-    font-size: 1.25rem;
+    font-size: 1.10rem;
     font-weight: 400;
     line-height: 1.5;
     color: var(--white);
 }
 
 .project-tags::selection {
-    color: var(--black);
-    background: var(--white);
+    color: var(--yellow);
+    background: transparent;
   }
 
-@media (max-width:1200px) {
+@media (max-width:1070px) {
     .project-tags {
+        position:relative;
+        width: 100%;
         margin-left: 0;
-        margin-top: 8rem;
+        padding-top: 1rem;
         text-align: left;
         font-size: 1.25rem;
         font-weight: 400;
@@ -434,7 +593,7 @@ main .projects-page {
 
 .project-description {
     margin-left: calc(100% / 12 * 4);
-    margin-top: 1rem;
+    margin-top: 4.5rem;
     margin-bottom: 2rem;
     text-align: left;
     font-size: 1.25rem;
@@ -443,16 +602,29 @@ main .projects-page {
     color: var(--white);
 }
 
+.italic {
+font-family: 'rungli-italic';
+src: url(fonts/rungli-italic.woff2);
+font-weight: 400;
+}
+
+.italic::selection {
+    font-family: 'rungli-italic';
+    src: url(fonts/rungli-italic.woff2);
+    font-weight: 400;
+    color: var(--yellow);
+    }
+
 .project-description::selection {
-    color: var(--black);
-    background: var(--white);
+    color: var(--yellow);
   }
 
 
-@media (max-width:1200px) {
+@media (max-width:1070px) {
     .project-description {
+        width: 100%;
         margin-left: 0;
-        margin-top: 1rem;
+        margin-top: 4rem;
         margin-bottom: 4rem;
         text-align: left;
         font-size: 1.25rem;
@@ -463,22 +635,28 @@ main .projects-page {
 }
 
 .link {
-    color: var(--pink);
+    font-family: 'rungli-italic';
+    src: url(fonts/rungli-italic.woff2);
+    font-weight: 400;
 }
 
 .link:hover {
-    color: var(--red);
+    font-family: 'rungli-italic';
+    src: url(fonts/rungli-italic.woff2);
+    font-weight: 400;
+    color: var(--yellow);
     transition: .2s;
 }
 
 .projects-page .project-image img {
+    position: sticky;
     margin-left: calc(100% / 12 * 4);
     width: calc(100% / 12 * 8);
     display: block;
     margin-bottom: 2rem;
 }
 
-@media (max-width:1200px) {
+@media (max-width:1070px) {
     .projects-page .project-image img {
     margin-left: 0;
     width: 100%;
@@ -488,35 +666,41 @@ main .projects-page {
 }
 
 .project-videos .project-video-1 {
-    width: 67%;
-    margin-left: 33%;
+    width: 100%;
     margin-bottom: 1rem;
 }
 
-@media (max-width:1200px) {
+@media (max-width:1050px) {
     .project-videos .project-video-1 {
         width: 100%;
-        margin-left: 0rem;
         margin-bottom: 1rem;
     }
 }
 
 .project-videos .project-video-2 {
     width: 50%;
-    margin-bottom: 1.5rem;
-}
-
-.project-videos .project-video-3 {
-    width: calc(100% / 4);
     margin-bottom: 1rem;
 }
 
+.project-videos {
+    margin-left: calc(100% / 3);
+}
+
+@media (max-width:1070px) {
+    .project-videos {
+        margin-left: 0;
+    }
+}
+
+.project-videos .project-video-3 {
+    width: calc(100% / 3);
+    margin-bottom: 1rem;
+}
 
 .project-videos .project-video-vertical {
     position: relative;
     overflow: hidden;
     margin-bottom: 1.5rem;
-    width: 100%;
     aspect-ratio: 9/16;
 }
 
@@ -645,7 +829,6 @@ main .projects-page {
 /* ----- RB ----- */
 .projects-page .flex-container-rb {
     width: auto;
-
     display: block;
 }
 
@@ -676,4 +859,72 @@ main .projects-page {
 /* ----- Verão Azul ----- */
 .video-va {
     margin-bottom: 2rem;
+}
+
+/* ----- SCREENshots ----- */
+
+.project-title-screenshot {
+    position: fixed;
+    width: calc(100% / 3.2);
+    margin-top: 4rem;
+    font-size: 2rem;
+    font-weight: 400;
+    line-height: 1.25;
+    color: var(--black);
+    background: transparent;
+}
+
+
+.project-title-screenshot::selection {
+    color: var(--yellow);
+  }
+
+
+@media (max-width:1200px) {
+    .project-title-screenshot {
+        position: fixed;
+        width: 100%;
+        margin-top: 4rem;
+        font-size: 2rem;
+        font-weight: 400;
+        line-height: 1.25;
+        color: var(--black);
+        background: transparent;
+    }
+}
+
+.project-tags-screenshot {
+    position: fixed;
+    width: calc(100% / 3.5);
+    margin-top: 8rem;
+    text-align: left;
+    font-size: 1.10rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: var(--black);
+    background: transparent;
+}
+
+.project-tags-screenshot::selection {
+    color: var(--yellow);
+  }
+
+@media (max-width:769px) {
+    .project-tags-screenshot {
+        position:relative;
+        width: 100%;
+        margin-left: 0;
+        padding-top: 1rem;
+        text-align: left;
+        font-size: 1.25rem;
+        font-weight: 400;
+        line-height: 1.5;
+        color: var(--black);
+        background: transparent;
+    }
+}
+
+.screenshot {
+    background-color: var(--grey);
+    color: var(--black);
 }
