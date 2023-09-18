@@ -254,10 +254,20 @@ main.about .about-text::selection {
 
 @media (max-width:769px) {
     main.about .about-text {
-        font-size: 3rem;
-        line-height: 3.5rem;
+        font-size: 1.75rem;
+        line-height: 2.25rem;
         padding-top: 4rem;
         padding-bottom: 2rem;
+    }
+
+    main.about .about-text::selection {
+    color: var(--yellow);
+    background: var(--yellow);
+    }
+
+    .playful::selection {
+        color: var(--pink);
+        background: var(--purple);
     }
 }
 
