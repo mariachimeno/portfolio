@@ -612,6 +612,7 @@ header.projects .menu-item:hover {
 font-family: 'rungli-italic';
 src: url(fonts/rungli-italic.woff2);
 font-weight: 400;
+
 }
 
 .italic::selection {
@@ -644,6 +645,7 @@ font-weight: 400;
     font-family: 'rungli-italic';
     src: url(fonts/rungli-italic.woff2);
     font-weight: 400;
+    font-size: 1.20rem;
 }
 
 .link:hover {
