@@ -216,7 +216,7 @@ header .logo {
 
 @media (max-width:769px) {
     header .logo {
-        width: calc(100% / 12 * 1);
+        width: calc(100% / 12 * 3.8);
         text-align: right;
     }
 }
