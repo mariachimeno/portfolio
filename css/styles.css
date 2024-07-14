@@ -324,8 +324,27 @@ main.about .about-detail {
 
 main.about .about-detail::selection {
     color: var(--grey);
-    
-  }
+}
+
+.about-detail .mono::selection {
+    color: var(--grey);
+}
+
+.about-detail-timeline-split::selection {
+    color: var(--grey);
+}
+
+.about-detail-timeline-split .mono::selection {
+    color: var(--grey);
+}
+
+.about-detail-timeline-2::selection {
+    color: var(--grey);
+}
+
+.about-detail-timeline .mono::selection {
+    color: var(--grey);
+}
 
 
 main.about .about-detail .about-link:hover {
@@ -380,7 +399,6 @@ main.about .about-detail-timeline .about-link:hover {
         line-height: 1.75rem;
     }
 }
-
 
 
 .about-link::selection {
@@ -1278,3 +1296,20 @@ header.projects .menu-item:hover {
     background-color: var(--grey);
 }
 
+.playful-2 {
+    font-family: 'cirrus-cumulus';
+    src: url(fonts/cirruscumulus.woff);
+    font-weight: 400;
+    color: var(--black);
+    
+}
+
+.playful-2:hover {
+    color: var(--yellow);
+    background: var(--orange);
+}
+
+.playful-2::selection {
+    color: var(--yellow);
+    background: var(--orange);
+}
