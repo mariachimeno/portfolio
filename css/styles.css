@@ -108,11 +108,25 @@ hr.solid {
     border: 0.15px solid var(--black);
   }
 
+.solid-black-about {
+    width: calc(100% / 12 * 12);
+    border: 0.15px solid var(--black);
+}
+
 .solid-black-about-mid {
     width: calc(100% / 12 * 10);
     margin-left: calc(100% / 12 * 2);
     border: 0.15px solid var(--black);
   }
+
+.solid-black-menu {
+    border: 0.15px solid var(--black);
+    margin-top: 0.15rem;
+    margin-bottom: 0.15rem;
+    font-size: 1.25rem;
+
+}
+
 
   @media (max-width:1000px) {
     .solid-black-about-mid {
@@ -521,6 +535,11 @@ main.projects {
     justify-content: flex-end;
 }
 
+.solid-black-menu::before {
+    border: 0.15px solid var(--white);
+}
+
+
 .card-info .card-title {
     font-size: 2rem;
     line-height: 2.45rem;
@@ -587,9 +606,9 @@ main.projects {
     background: var(--green);
 }
 
-
-
-
+.card:hover .solid-black-menu {
+    border: 0.15px solid var(--white);
+}
 
 .card:hover .card-info {
     color: var(--white);
