@@ -512,6 +512,7 @@ main.projects {
 
 }
 
+
 .card::before {
     float: left;
     padding-top: 56.25%;
@@ -524,11 +525,14 @@ main.projects {
     clear: both;
   }
 
+
+
 @media (max-width:900px) {
     .card {
         flex: 100%;
     }
 }
+
 
 .card-image {
     width: auto;
@@ -543,6 +547,20 @@ main.projects {
     background-position: 1.5rem 1.5rem;
     background-repeat: no-repeat;
 }
+
+.card-image-2 {
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: var(--black);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
 
 .card-info {
     position: absolute;
@@ -561,6 +579,8 @@ main.projects {
     justify-content: flex-end;
 }
 
+
+
 .solid-black-menu::before {
     border: 0.15px solid var(--white);
 }
@@ -571,6 +591,20 @@ main.projects {
     line-height: 2.45rem;
     padding-bottom: 1rem;
    }
+
+   .card-info .card-title-2 {
+    font-family: 'cirrus-cumulus';
+    src: url(fonts/cirruscumulus.woff);
+    font-weight: 400;
+    font-size: 3rem;
+    line-height: 2.45rem;
+    padding-bottom: 1rem;
+   }
+
+
+.white {
+    background: var(--white);
+}
 
 .grey {
     background:var(--grey);
